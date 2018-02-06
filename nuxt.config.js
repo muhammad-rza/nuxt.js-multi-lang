@@ -1,6 +1,12 @@
 const pkg = require('./package')
 
 module.exports = {
+
+    router: {
+        middleware: 'i18n'
+    },
+
+
   mode: 'universal',
 
   /*
@@ -32,8 +38,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/i18n.js'],
 
   /*
   ** Nuxt.js modules
@@ -56,6 +61,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+      vendor: ['vue-i18n'],
     /*
     ** You can extend webpack config here
     */
